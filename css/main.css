@@ -1,0 +1,68 @@
+@import url(reset.css);
+
+/*==========layout============*/
+body {
+  font-size: 14px;
+  color: #4e4e4e;
+  line-height: 1.4;
+}
+.wrap {
+  width: 100%;
+  min-width: 1024px;
+}
+
+/*============header============*/
+header {
+  border: 1px solid black;
+  width: 100%;
+  height: 120px;
+  padding: 0 60px;
+  position: fixed;
+  top: 0;
+  line-height: 120px;
+}
+header .logo {
+  display: block;
+  font-size: 42px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #39312b;
+  float: left;
+}
+header nav .gnb {
+  float: right;
+}
+header nav .gnb li {
+  display: inline-block;
+  margin-left: 60px;
+}
+header nav .gnb li a {
+  display: block;
+  font-size: 18px;
+  text-transform: uppercase;
+  position: relative;
+}
+/* header nav .gnb li a:after {
+  content: '';
+  width: 0%;
+  height: 1px;
+  position: absolute;
+  background-color: #888;
+  bottom: 47px;
+  left: 50%;
+  transform: translate(-50%);
+  transition: all 0.5s;
+}
+
+header nav .gnb li a:hover:after,
+header nav .gnb li a:focus:after {
+  width: 100%;
+}
+ */
+header nav .gnb li a:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: 1px solid black;
+}
