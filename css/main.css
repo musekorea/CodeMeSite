@@ -42,7 +42,7 @@ header nav .gnb li a {
   text-transform: uppercase;
   position: relative;
 }
-/* header nav .gnb li a:after {
+header nav .gnb li a:after {
   content: '';
   width: 0%;
   height: 1px;
@@ -51,18 +51,10 @@ header nav .gnb li a {
   bottom: 47px;
   left: 50%;
   transform: translate(-50%);
-  transition: all 0.5s;
+  transition: all 0.4s;
 }
 
 header nav .gnb li a:hover:after,
 header nav .gnb li a:focus:after {
   width: 100%;
-}
- */
-header nav .gnb li a:after {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  border: 1px solid black;
 }
