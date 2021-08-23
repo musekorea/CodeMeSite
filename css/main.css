@@ -13,13 +13,14 @@ body {
 
 /*============header============*/
 header {
-  border: 1px solid black;
   width: 100%;
-  height: 120px;
+  height: 100px;
   padding: 0 60px;
   position: fixed;
   top: 0;
-  line-height: 120px;
+  line-height: 100px;
+  background-color: #fff;
+  z-index: 999;
 }
 header .logo {
   display: block;
@@ -48,7 +49,7 @@ header nav .gnb li a:after {
   height: 1px;
   position: absolute;
   background-color: #888;
-  bottom: 47px;
+  bottom: 36px;
   left: 50%;
   transform: translate(-50%);
   transition: all 0.4s;
@@ -57,4 +58,159 @@ header nav .gnb li a:after {
 header nav .gnb li a:hover:after,
 header nav .gnb li a:focus:after {
   width: 100%;
+}
+
+/*========VISUAL========*/
+section.visual {
+  margin-top: 0;
+  padding-bottom: 50px;
+  position: relative;
+}
+section.visual:before {
+  content: '';
+  width: 53%;
+  height: 400px;
+  position: absolute;
+  bottom: 0;
+  right: 0%;
+  background-color: #f0f0f0;
+}
+section.visual .img {
+  top: 100px;
+  max-width: 94%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+@keyframes scaleani {
+  0% {
+    transform: scale(1.3);
+  }
+  30% {
+    transform: scale(1.3);
+  }
+}
+section.visual .img img {
+  width: 100%;
+  transform: scale(1);
+  animation: scaleani 10s ease-in-out;
+}
+
+section.visual .img .mask {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.16);
+  border: none;
+  z-index: 1;
+}
+
+@keyframes mask {
+  0% {
+    width: 25%;
+    background-color: #000;
+  }
+  50% {
+    width: 25%;
+    background-color: #000;
+  }
+  99% {
+    background-color: #000;
+  }
+}
+
+section.visual .img .mask.a {
+  left: 0%;
+  animation: mask 0.6s ease-in-out;
+}
+section.visual .img .mask.b {
+  left: 25%;
+  animation: mask 0.8s ease-in-out;
+}
+section.visual .img .mask.c {
+  left: 50%;
+  animation: mask 1s ease-in-out;
+}
+section.visual .img .mask.d {
+  left: 75%;
+  animation: mask 1.2s ease-in-out;
+}
+
+section.visual .title {
+  position: absolute;
+  top: 40%;
+  left: 8%;
+  color: #fff;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+    transition: translateY(40px);
+  }
+}
+section.visual .title h2 {
+  font-size: 50px;
+  margin-bottom: 30px;
+  animation: slide-up 1.5s;
+}
+section.visual .title h2 p {
+  font-size: 20px;
+  font-weight: 300;
+  animation: slide-up 2.2s;
+}
+section.visual .menu {
+  position: absolute;
+  bottom: 15%;
+  left: 8%;
+  animation: slide-up 2.8s;
+}
+section.visual .menu li {
+  float: left;
+  margin: 60px;
+}
+section.visual .menu li a {
+  display: block;
+  color: #fff;
+}
+section.visual .menu li a p {
+  float: left;
+  font-weight: bold;
+  line-height: 1.6;
+}
+section.visual .menu li a p span {
+  display: block;
+  font-weight: 100;
+  font-size: 15px;
+  color: #aaa;
+}
+section.visual .menu li a .arrow {
+  display: block;
+  float: right;
+  margin-top: 10px;
+  margin-left: 20px;
+  position: relative;
+  z-index: 1;
+}
+section.visual .menu li a .arrow:before {
+  content: '';
+  width: 40px;
+  height: 40px;
+  background-color: rgba(252, 252, 252, 0.4);
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  z-index: -1;
+  transition: all 0.2s;
+}
+
+section.visual .menu li a .arrow:hover:before,
+section.visual .menu li a .arrow:hover:focus {
+  right: 0;
+  top: 0;
 }
