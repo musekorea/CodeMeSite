@@ -63,37 +63,60 @@ header nav .gnb li a:focus:after {
 /*========VISUAL========*/
 section.visual {
   margin-top: 0;
+  width: 100%;
   padding-bottom: 50px;
   position: relative;
 }
 section.visual:before {
   content: '';
   width: 53%;
-  height: 400px;
+  height: 200px;
   position: absolute;
-  bottom: 0;
+  bottom: 180px;
   right: 0%;
   background-color: #f0f0f0;
 }
 section.visual .img {
   top: 100px;
-  max-width: 94%;
+  width: 89.3%;
+  height: 100%;
   text-align: center;
   position: relative;
   overflow: hidden;
+  transform: translateY(-25%);
 }
-@keyframes scaleani {
+@keyframes alphaOpacity {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+}
+section.visual .img:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 100px;
+  background-color: black;
+  animation: alphaOpacity 5s;
+  opacity: 0.5;
+  z-index: 1;
+}
+@keyframes scaleAni {
   0% {
     transform: scale(1.3);
   }
-  30% {
+  9% {
     transform: scale(1.3);
   }
 }
 section.visual .img img {
   width: 100%;
+
   transform: scale(1);
-  animation: scaleani 10s ease-in-out;
+  animation: scaleAni 10s ease-in-out;
 }
 
 section.visual .img .mask {
@@ -137,7 +160,7 @@ section.visual .img .mask.d {
   left: 75%;
   animation: mask 1.2s ease-in-out;
 }
-
+/*=========VISUAL TITLE=========*/
 section.visual .title {
   position: absolute;
   top: 40%;
@@ -156,49 +179,85 @@ section.visual .title {
 }
 section.visual .title h2 {
   font-size: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   animation: slide-up 1.5s;
 }
-section.visual .title h2 p {
+section.visual .title p {
   font-size: 20px;
   font-weight: 300;
   animation: slide-up 2.2s;
 }
+/*=========VISUAL MENU=========*/
 section.visual .menu {
   position: absolute;
-  bottom: 15%;
-  left: 8%;
+  width: 89.3%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  bottom: 30%;
   animation: slide-up 2.8s;
 }
-section.visual .menu li {
-  float: left;
-  margin: 60px;
-}
+
 section.visual .menu li a {
-  display: block;
   color: #fff;
 }
-section.visual .menu li a p {
+section.visual .menu li a .logo-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+section.visual .menu li a .frontend-logo,
+.backend-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+section.visual .menu li a .js-logo {
+  width: 32px;
+  height: 40px;
+}
+
+section.visual .menu li a .nodejs-logo {
+  width: 70px;
+  height: 40px;
+}
+section.visual .menu li a .frontend-logo:hover,
+.python-logo:hover,
+.nodejs-logo:hover {
+  transform: scale(1.1);
+  transition: all 0.4s ease;
+}
+section.visual .menu li a .menu-inside-box {
   float: left;
+}
+section.visual .menu li a .menu-inside-box:hover {
+  color: pink;
+}
+section.visual .menu li a .topP {
+  font-weight: 100;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+}
+section.visual .menu li a .underP {
   font-weight: bold;
   line-height: 1.6;
 }
-section.visual .menu li a p span {
-  display: block;
-  font-weight: 100;
-  font-size: 15px;
-  color: #aaa;
-}
+
+/*=======VISUAL ARROW =======*/
+
 section.visual .menu li a .arrow {
-  display: block;
-  float: right;
   margin-top: 10px;
   margin-left: 20px;
   position: relative;
   z-index: 1;
 }
+
 section.visual .menu li a .arrow:before {
   content: '';
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  display: block;
   width: 40px;
   height: 40px;
   background-color: rgba(252, 252, 252, 0.4);
