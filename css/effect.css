@@ -1,0 +1,65 @@
+@keyframes alphaOpacity {
+  0% {
+    opacity: 0;
+  }
+  9% {
+    opacity: 0;
+  }
+}
+@keyframes scaleAni {
+  0% {
+    transform: scale(1.3);
+  }
+  9% {
+    transform: scale(1.3);
+  }
+}
+
+@keyframes mask {
+  0% {
+    width: 25%;
+    background-color: #000;
+  }
+  50% {
+    width: 25%;
+    background-color: #000;
+  }
+  99% {
+    background-color: #000;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+}
+@keyframes slide-up2 {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+}
+@keyframes dot {
+  100% {
+    opacity: 1;
+    transform: scale(3);
+    background-color: gray;
+    opacity: 0;
+  }
+}
+@keyframes opacity-ani {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+}
