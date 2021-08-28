@@ -69,8 +69,8 @@ header nav .gnb li a:focus:after {
 /*======VISUAL LANDING ======*/
 section.visual {
   margin-top: 0;
+  margin-bottom: 0;
   width: 100%;
-  padding-bottom: 50px;
   position: relative;
 }
 section.visual:before {
@@ -78,7 +78,7 @@ section.visual:before {
   width: 53%;
   height: 200px;
   position: absolute;
-  bottom: 180px;
+  bottom: 7%;
   right: 0%;
   background-color: #f0f0f0;
 }
@@ -141,7 +141,7 @@ section.visual .img .mask.d {
 /*=========VISUAL TITLE=========*/
 section.visual .title {
   position: absolute;
-  top: 40%;
+  top: 35%;
   left: 8%;
   color: #fff;
 }
@@ -163,7 +163,7 @@ section.visual .menu {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  bottom: 30%;
+  bottom: 25%;
   animation: slide-up 2.5s ease-in-out;
 }
 
@@ -253,18 +253,36 @@ section.visual .menu li a .arrow:hover:focus {
 section.about {
   width: 95%;
   margin: 40px;
+  margin-top: 0px;
   text-align: center;
   position: relative;
+  overflow: hidden;
 }
-section.about img {
+section.about .image {
+  position: relative;
+  overflow: hidden;
+}
+section.about .image:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: black;
+  animation: alphaOpacity 5s;
+  opacity: 0.5;
+  z-index: 1;
+}
+section.about .image img {
   width: 100%;
 }
+
 section.about .inner {
   width: 100%;
   position: absolute;
   top: 35%;
   left: 50%;
   transform: translate(-50%);
+  z-index: 999;
 }
 section.about .inner h2 {
   font-size: 30px;
@@ -273,6 +291,10 @@ section.about .inner h2 {
 }
 section.about .inner h2 {
   animation: slide-up 0.8s ease;
+}
+section.about .inner h2 .colon {
+  color: yellow;
+  margin: 0 2px;
 }
 
 section.about .inner .line {
@@ -286,9 +308,10 @@ section.about .inner .line span {
   width: 100%;
   height: 1px;
   background-color: rgba(255, 255, 255, 0.25);
+  background-color: pink;
 }
 section.about .inner .line span {
-  animation: opacity-ani 0.8s;
+  animation: opacity-ani 1s;
 }
 
 section.about .inner .line li {
@@ -337,7 +360,6 @@ section.about .inner ul {
   margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
 }
 section.about .inner ul li {
   color: #c5c5c5;

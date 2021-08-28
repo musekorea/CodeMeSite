@@ -51,7 +51,7 @@
   100% {
     opacity: 1;
     transform: scale(3);
-    background-color: gray;
+    background-color: pink;
     opacity: 0;
   }
 }
